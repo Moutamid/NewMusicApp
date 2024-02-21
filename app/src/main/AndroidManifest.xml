@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.moutimid.facebookads">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="com.moutimid.facebookads.ActivityBase"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Design.NoActionBar"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:theme="@style/ThemeSplash"
+            android:name="com.moutimid.facebookads.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:theme="@style/ThemeDefault"
+            android:name=".ActivityHome"
+            android:label="Home Page" />
+
+        <activity
+            android:name=".Ad_Banner"
+            android:label="Banner Ads" />
+
+        <activity
+            android:name=".Ad_Interstitial"
+            android:label="Interstitial Ad" />
+
+        <activity
+            android:name=".Ad_Rectangle"
+            android:label="Rectangle Ad" />
+
+        <activity
+            android:name=".Ad_Reward"
+            android:label="Reward Ad" />
+
+        <activity
+            android:name="com.moutimid.facebookads.FavouriteScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.moutimid.facebookads.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.moutimid.facebookads.MusicPlayerActivity"
+            android:exported="false" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id"/>
+    </application>
+
+</manifest>
